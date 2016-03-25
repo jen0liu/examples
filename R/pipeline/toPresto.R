@@ -83,7 +83,8 @@ for(i in 1:length(brands)){
 		maps=hash(c("character","numeric","Date"),c("string","double","string"))
 		types=sapply(data, class)
 		names=colnames(data)
-		names=names[which(names!="week")]
+		mapped.names=hash(names,types)
+		mapped.names=del("week",mapped.names)
 		schema=""
 		for(i in 1:length(names)){
 			schema=paste(schema,"[ ",sep="")
