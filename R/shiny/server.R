@@ -628,7 +628,7 @@ shinyServer(function(input, output) {
 				if(input$selectionPath == "byTemplate" & input$correlate == TRUE){
 					sessionId = system(sprintf("curl http://example.com/getSessionId?configId=%s",input$selectionConfigId), intern=TRUE)
 					tableName = fromJSON(sprintf("http://example.com/getConfig?configId=%s", input$selectionConfigId))$tableName										
-					con <- dbConnect(PostgreSQL(), host="psql-01.dev.quantifind.com",user= "dev", password="qIMtX650l#NY.~og", dbname="financials")
+					con <- dbConnect(PostgreSQL(), host="example.com",user= "usr", password="pwd", dbname="table")
 					query = paste("select * from", tableName)
 					data=rs <- dbSendQuery(con,query)
 					data=fetch(data,n=-1)
