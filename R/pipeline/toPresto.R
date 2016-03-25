@@ -76,7 +76,7 @@ for(i in 1:length(brands)){
 		dir.create(output.dir, showWarnings = FALSE)
 		setwd(output.dir)
 		weekly <- split(data, data$week)
-		lapply(names(weekly), function(x){write.table(as.data.frame(weekly[[x]])[,!names(weekly[[x]]) %in% c("week")],col.names = FALSE,row.names = FALSE, quote = FALSE,sep=",", file = paste(uploadTime,"_Quantifind_data_", x, ".csv",sep = ""))})
+		lapply(names(weekly), function(x){write.table(as.data.frame(weekly[[x]])[,!names(weekly[[x]]) %in% c("week")],col.names = FALSE,row.names = FALSE, quote = FALSE,sep=",", file = paste(uploadTime,"_data_", x, ".csv",sep = ""))})
 		
 		########## Generate schema for presto and write done.txt ###########
 		
