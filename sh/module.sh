@@ -18,8 +18,8 @@ do
 	sbt/sbt "project science" "run-main Module
 	--host example.com
 	--port 3000
-	--qpid ${qpids[$i-1]}
-	--qpidName ${qpidNames[$i-1]}
+	--qpid ${ids[$i-1]}
+	--qpidName ${idNames[$i-1]}
 	--vertical $vertical
 	--startDate 2014-01-01
 	--endDate 2015-11-01
