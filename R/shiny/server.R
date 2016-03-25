@@ -638,8 +638,8 @@ shinyServer(function(input, output) {
 						nameTable[i,1]=names(configDef[i])
 						nameTable[i,2]=as.character(as.data.frame(configDef[i])[,1])
 					}
-					colnames(nameTable)=c("name","qpid")
-					data=data[which(data$brand == input$ids | data$brand == nameTable[which(nameTable$name==input$ids),"qpid"]),c("brand","start_date","original_kpi")]
+					colnames(nameTable)=c("name","id")
+					data=data[which(data$brand == input$ids | data$brand == nameTable[which(nameTable$name==input$ids),"id"]),c("brand","start_date","original_kpi")]
 					data$start_date=as.Date(data$start_date/86400000,origin="1970-01-01")
 					data.frame(data)	
 				}

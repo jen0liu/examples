@@ -49,7 +49,7 @@ for(i in 1:length(brands)){
 		data$week=data$week-1 ## Presto week is inclusive
 		
 		########## Data QA ###################################
-		## generate plots here and can view plots. http://jen0.dev.quantifind.com/financial/plots/
+		## generate plots here and can view plots. http://example.com/financial/plots/
 		
 		output.dir=file.path("/var/www/html/financial", "plot")
 		dir.create(output.dir, showWarnings = FALSE)
